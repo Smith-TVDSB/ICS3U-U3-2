@@ -4,7 +4,7 @@
 
 #define CATCH_CONFIG_MAIN // defines main() automatically
 #include "catch.hpp"
-
+#include "additionalFunctions.hpp"
 #include "student.hpp" // student implementations
 
 //TESTS
@@ -39,15 +39,7 @@ TEST_CASE("Exercise Three")
     CHECK(exerciseThree(1)==false);
     CHECK(exerciseThree(2)==true);
     CHECK(exerciseThree(13)==true);
-    bool inArray(int arr[25], int key)
-    {
-        for(int k = 0; k < 25; k++){
-            if(arr[i] == key){
-                return true;
-            }
-        }
-        return false;
-    }
+
     for (int j=2; j<=100;j++)
     {
         if(inArray(primes,j))
