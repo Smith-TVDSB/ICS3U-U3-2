@@ -8,9 +8,17 @@ using namespace std;
 // implementations
 
 //Replace string function
-int function()
+int exerciseOne(char letter)
 {
-	return "0"; // TODO: fix
+	return 0;
 }
 
+string exerciseTwo(int number)
+{
+	return "0";
+}
 
+bool exerciseThree(int number)
+{
+	return false;
+}

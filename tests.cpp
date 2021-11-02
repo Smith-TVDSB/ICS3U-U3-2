@@ -9,19 +9,57 @@
 
 //TESTS
 
-TEST_CASE("ExerciseOne") //Named ExerciseOne, tagged with example
-{
-    
-    //TODO: Set up tests
-    REQUIRE(replace(function()==Approx(5)); //within 1 of 5
-    REQUIRE(replace(function()==Approx(3).margin(5)); //within 5 units of 3
-    
-    //Checks keeps running if fails
-    CHECK(function()==0)
+int primes[] = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97}
 
-    //Checks if a function throws an exception
-    REQUIRE_THROWS_WITH( openThePodBayDoors(), Contains( "afraid" ) && Contains( "can't do that" ) );
-        
+bool inArray(int arr[], int key)
+{
+    for(int k = 0; k < 25; k++){
+     if(arr[i] == key){
+         return true;
+     }
+}
+return false;
+}
+
+TEST_CASE("Exercise One") //Named ExerciseOne, tagged with example
+{
+    CHECK(exerciseOne('Z')==26);
+    CHECK(exerciseOne('A')==1);
+    int count = 1;
+    for(char i='A'; i <= 'Z';i++)
+    {
+        REQUIRE(exerciseOne(i)==count);
+        count++;
+    }   
+}
+
+TEST_CASE("Exercise Two")
+{
+    CHECK(exerciseTwo(7)=="1234567654321");
+    CHECK(exerciseTwo(5)=="123454321");
+    CHECK(exerciseTwo(10)=="12345678910987654321");
+    CHECK(exerciseTwo(1)=="1");
+    CHECK(exerciseTwo(0)=="");
+    CHECK(exerciseTwo(-5)=="");
+}
+
+TEST_CASE("Exercise Three")
+{
+    CHECK(exerciseThree(7)==true);
+    CHECK(exerciseThree(1)==false);
+    CHECK(exerciseThree(2)==true);
+    CHECK(exerciseThree(13)==true);
+    for (int j=2; j<=100;j++)
+    {
+        if(inArray(primes,j) )
+        {
+            REQUIRE(exerciseThree(j)==true);
+        }
+        else
+        {
+            REQUIRE(exerciseThree(j)==false);
+        }
+    }
 }
 
 // Notes for teacher: 
